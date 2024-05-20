@@ -1,0 +1,91 @@
+body 
+{
+    margin:0;
+    padding:0;
+    background-color:darkkhaki;/* Fondo amarillito */
+    min-height:100vh; /* Asegura que el fondo ocupe al menos la altura de la ventana */
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+nav 
+{
+    width:100%;
+    background-color:rgba(233, 233, 16, 0.7); /* Fondo semi-transparente */
+    padding:10px 0;
+}
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista por defecto */
+    padding: 0; /* Elimina el relleno por defecto de la lista */
+    margin: 0; /* Elimina el margen por defecto de la lista */
+    display: flex; /* Utiliza flexbox para alinear los elementos dentro del ul en una fila */
+    justify-content: center; /* Centra horizontalmente los elementos de la lista */
+    width: 100%; /* Hace que el ul ocupe el 100% del ancho del contenedor (en este caso, el nav) */
+}
+nav ul li 
+{
+    margin: 0 10px; /* Ajusta el espacio alrededor de cada elemento de la lista */
+}
+nav ul li a 
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: medium; /* Tamaño de letra */
+    padding: 5px 10px; /* Ajusta el espacio entre los elementos de la lista */
+}
+main 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    flex-grow: 1; /* Hace que el main ocupe el espacio disponible */
+    padding: 50px 20px; /* Añade espacio alrededor del contenido principal */
+}
+form 
+{
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+.is-invalid 
+{
+    border-color: red;
+}
+.is-invalid::placeholder 
+{
+    color: red;
+}
+/* Media Query para dispositivos de escritorio que pide consigna*/
+@media screen and (min-width: 1024px) {
+    nav ul li 
+    {
+        /*aqui aumento el espacio entre los elementos de la lista en pantallas mas grandes*/
+        margin: 0 20px; 
+    }
+}
+/* Media Query para tabets */
+@media screen and (max-width: 1023px) 
+{
+    nav ul li 
+    {
+        /*reduse el espacio entre elementos de la lista en la tablet*/
+        margin: 0 15px; 
+    }
+}
+/* Media Query para dispositivos moviles */
+@media screen and (max-width: 767px) 
+{
+    nav ul 
+    {
+        flex-direction:column; /* Cambia la dirección de la lista a columna em el dispositovo */
+        align-items:center; /* Centro los elementos verticalmente */
+    }
+    nav ul li 
+    {
+        margin: 10px 0;/* Ajusta el margen entre elementos de la lista en los moviles */
+    }
+}

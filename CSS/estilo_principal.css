@@ -1,0 +1,97 @@
+body 
+{
+    /*elimino el margen y el relleno del body*/
+    margin:0;
+    padding:0;
+    /*aqui traere la imagen*/
+    background-image:url('../Imagenes/de_tuti.jpg');
+    /*con size hare que cubra toda el area la foto*/
+    /*con position que se centre toda la imagen en el fondo*/
+    /*y no-repeat para que no se repita */
+    /*para la altura minima que sea igual a la altura de la pantalla del chrome*/ 
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:100vh; 
+}
+nav 
+{
+    /* aqui creo la parte del nav el color que tendra */
+    width:100%;
+    background-color:rgba(233, 233, 16, 0.0);
+    padding: 10px 0;
+}
+nav ul
+{
+    list-style-type:none; /* Elimina los puntos de la lista por defecto */
+    padding:0; /* Elimina el relleno por defecto de la lista */
+    margin:0; /* Elimina el margen por defecto de la lista */
+    display:flex; /* Utiliza flexbox para alinear los elementos dentro del ul en una fila */
+    justify-content:center; /* Centra horizontalmente los elementos de la lista */
+    width:100%; /* Hace que el ul ocupe el 100% del ancho del contenedor (en este caso, el nav) */
+}
+nav ul li 
+{
+    margin: 0 10px; /* Ajusta el espacio alrededor de cada elemento de la lista */
+}
+nav ul li a 
+{
+    text-decoration: none;
+    color:brown;
+    font-weight: bold;
+    font-size: medium; /* Tamaño de letra */
+    padding: 5px 10px; /* Ajusta el espacio entre los elementos de la lista */
+}
+main 
+{
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno encima del otro */
+    justify-content: flex-end; /* Coloca el contenido al final del contenedor */
+    align-items: center; /* Centra horizontalmente los elementos */
+    height: calc(100vh - 60px); /* Calcula la altura del main, dejando espacio para el nav */
+    padding-bottom: 50px; /* Añade espacio en la parte inferior para evitar que el contenido se pegue al borde */
+}
+main li 
+{
+    list-style-type: none; /* Elimina los puntos de la lista por defecto */
+}
+main li:last-child 
+{
+    margin-top: 20px; /* Añade un margen superior al último elemento de la lista */
+}
+main li a 
+{
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+    font-size: medium; /* Tamaño de letra */
+}
+/* Media Query para dispositivos de escritorio */
+@media screen and (min-width: 1024px) 
+{
+    nav ul li 
+    {
+        margin: 0 20px; /* Aumenta el espacio entre elementos de la lista en pantallas más grandes */
+    }
+}
+/* Media Query para tablets */
+@media screen and (max-width: 1023px) 
+{
+    nav ul li 
+    {
+        margin: 0 15px; /* Reduce ligeramente el espacio entre elementos de la lista en tablets */
+    }
+}
+/* Media Query para dispositivos moviles */
+@media screen and (max-width: 767px) 
+{
+    nav ul 
+    {
+        flex-direction: column; /* Cambia la dirección de la lista a columna en dispositivos móviles */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+    nav ul li 
+    {
+        margin: 10px 0; /* Ajusta el margen entre elementos de la lista en moviles */
+    }
+}
